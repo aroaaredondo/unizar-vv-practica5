@@ -295,14 +295,14 @@ public class InventoryTest {
     }
 
     @Test
-    public void testExtra1() {
+    public void get_name_test() {
         Item backStagePass = new Item("Backstage passes to a TAFKAL80ETC concert", 1, 48);
         backStagePass.setName("prueba");
         assertEquals("prueba", backStagePass.getName());
     }
 
     @Test
-    public void testExtra2() {
+    public void should_never_changes_quailty_of_Sulfuras_negative_sellIn() {
         Item sulfuras = new Item("Sulfuras, Hand of Ragnaros", -1, 80);
         Inventory inventory = createInventory(sulfuras);
         inventory.updateQuality();
